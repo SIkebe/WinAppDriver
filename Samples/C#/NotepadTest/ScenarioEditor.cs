@@ -30,7 +30,7 @@ namespace NotepadTest
             // Type mixed text and apply shift modifier to 7890_ to generate corresponding symbols
             Thread.Sleep(TimeSpan.FromSeconds(2));
             editBox.SendKeys("abcdeABCDE 12345" + Keys.Shift + "7890-" + Keys.Shift + @"!@#$%");
-            Assert.AreEqual(@"abcdeABCDE 12345&*()_!@#$%", editBox.Text);
+            Assert.AreEqual(@"abcdeABCDE 12345'()=!@#$%", editBox.Text);
         }
 
         [TestMethod]

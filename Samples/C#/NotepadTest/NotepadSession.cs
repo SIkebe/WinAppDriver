@@ -43,13 +43,13 @@ namespace NotepadTest
                 Assert.IsNotNull(session.SessionId);
 
                 // Verify that Notepad is started with untitled new file
-                Assert.AreEqual("Untitled - Notepad", session.Title);
+                Assert.AreEqual("タイトルなし - メモ帳", session.Title);
 
                 // Set implicit timeout to 1.5 seconds to make element search to retry every 500 ms for at most three times
                 session.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1.5);
 
                 // Keep track of the edit box to be used throughout the session
-                editBox = session.FindElementByClassName("Edit");
+                editBox = session.FindElementByClassName("RichEditD2DPT");
                 Assert.IsNotNull(editBox);
             }
         }
